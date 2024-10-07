@@ -15,24 +15,28 @@ const Contact = () => {
     });
   };
 
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.send(
-      'service_s5rpvon',        // Your EmailJS service ID
-      'template_7qsszaq',       // Your EmailJS template ID
+      SERVICE_ID,
+      TEMPLATE_ID,
       {
         from_name: formData.name,
         message: formData.message,
-        to_name: 'Prajith',     // Auto-reply or your name
-        reply_to: formData.email // The email provided by the user
+        to_name: 'Prajith',
+        reply_to: formData.email,
       },
-      '2zvBSP1TPHBEZooui'       // Your EmailJS Public Key (User ID)
+      PUBLIC_KEY
     ).then((result) => {
-        console.log('Email successfully sent!', result.text);
-        alert("Message Sent! I'll get back to you shortly.");
+      console.log('Email successfully sent!', result.text);
+      alert("Message Sent! I'll get back to you shortly.");
     }, (error) => {
-        console.log('Failed to send the email, error:', error.text);
+      console.log('Failed to send the email, error:', error.text);
     });
 
     // Clear the form after submission
@@ -44,18 +48,15 @@ const Contact = () => {
   };
 
   return (
-    <>
-      <div className="border-b border-neutral-900 pb-4">
-        <h2 className="my-20 text-center text-4xl">
-          <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent font-m">
-            CONTACT
-          </span>
-        </h2>
-      </div>
+    <div className="border-b border-neutral-900 pb-4">
+      <h2 className="my-20 text-center text-4xl">
+        <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent font-m">
+          CONTACT
+        </span>
+      </h2>
 
       <div className="flex justify-center">
         <form className="w-full max-w-lg bg-neutral-900 p-8 rounded-lg shadow-lg" onSubmit={sendEmail}>
-          {/* Name Input */}
           <div className="mb-4">
             <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
               Name
@@ -71,7 +72,6 @@ const Contact = () => {
             />
           </div>
 
-          {/* Email Input */}
           <div className="mb-4">
             <label className="block text-white text-sm font-bold mb-2" htmlFor="email">
               Email
@@ -87,7 +87,6 @@ const Contact = () => {
             />
           </div>
 
-          {/* Message TextArea */}
           <div className="mb-6">
             <label className="block text-white text-sm font-bold mb-2" htmlFor="message">
               Message
@@ -103,7 +102,6 @@ const Contact = () => {
             />
           </div>
 
-          {/* Submit Button */}
           <div className="flex items-center justify-center">
             <button
               className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -114,7 +112,7 @@ const Contact = () => {
           </div>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 
