@@ -4,7 +4,7 @@ const Achievements = () => {
   const achievementData = [
     {
       id: "item2",
-      image: "/src/assets/Carousel/Ties.JPG",
+      image: "/src/assets/Carousel/Ties.jpg",
       title: " Covai Ties-2024",
       description: "Winner of the Cricket Tournament."
     },
@@ -16,19 +16,19 @@ const Achievements = () => {
     },
     {
       id: "item4",
-      image: "/src/assets/Carousel/Photographyrunner.JPG",
+      image: "/src/assets/Carousel/Photographyrunner.jpg",
       title: "DSLR Photography Event in BLITZ 2021",
       description: "Won Third place in the Photography Competition."
     },
     {
       id: "item3",
-      image: "/src/assets/Carousel/Zone2022.JPEG",
+      image: "/src/assets/Carousel/Zone2022.jpeg",
       title: "Anna University -Zonal 2022-23",
       description: "Secured Third place in the cricket tournament."
     },
     {
      id: "item5",
-     image: "/src/assets/Carousel/Zone2024.JPEG",  // Update this with your image path
+     image: "/src/assets/Carousel/Zone2024.jpeg",  // Update this with your image path
      title: "Anna University -Zonal 2024-25",
      description: "Secured Third place in the Cricket Tournament."
    },
