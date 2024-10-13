@@ -21,7 +21,7 @@ export default function About() {
 
             {/* Download Resume Button */}
             <a
-              href="Portfolio/src/assets/resume.pdf" // Update with your actual resume path
+              href="https://drive.google.com/file/d/1YH_nd8xYkHuLGN_r63DslY7iQpNrotgy/view?usp=sharing" // Update with your actual resume path
               download="Prajith_Resume.pdf"   // File name for download
               className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg"
             >

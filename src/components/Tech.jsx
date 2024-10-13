@@ -37,9 +37,8 @@ const Tech = () => {
             <motion.div 
               key={index} 
               className="relative group rounded-2xl border-4 border-neutral-800 p-4 w-32 h-32 flex flex-col items-center justify-center transition-transform duration-200"
-              whileHover={{ scale: 1.15 }}  // Faster scale effect on hover
-              animate={{ y: [0, -8, 0] }} // Faster up and down motion
-              transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}  // Faster loop animation
+              whileHover={{ scale: 1.15, y: -8 }}  // Scale effect and upward motion on hover
+              transition={{ duration: 0.3 }}  // Faster transition for smoother effect
             >
               {/* Icon */}
               {tech.icon}
