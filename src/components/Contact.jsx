@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -56,13 +57,19 @@ const Contact = () => {
       </h2>
 
       <div className="flex justify-center">
-        <form className="w-full max-w-lg bg-neutral-900 p-8 rounded-lg shadow-lg" onSubmit={sendEmail}>
+        <motion.form
+          className="w-full max-w-lg bg-neutral-900 p-8 rounded-lg shadow-lg"
+          onSubmit={sendEmail}
+          initial={{ opacity: 0, y: -20 }} // Animation on load
+          animate={{ opacity: 1, y: 0 }} // Animate to full opacity and position
+          transition={{ duration: 0.5 }} // Transition duration
+        >
           <div className="mb-4">
             <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
               Name
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-white bg-gray-800 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:scale-105" // Added scaling on hover
               id="name"
               name="name"
               type="text"
@@ -77,7 +84,7 @@ const Contact = () => {
               Email
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-white bg-gray-800 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:scale-105"
               id="email"
               name="email"
               type="email"
@@ -92,7 +99,7 @@ const Contact = () => {
               Message
             </label>
             <textarea
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-white bg-gray-800 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:scale-105"
               id="message"
               name="message"
               rows="4"
@@ -103,14 +110,20 @@ const Contact = () => {
           </div>
 
           <div className="flex items-center justify-center">
-            <button
-              className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            <motion.button
+              className="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-gradient-to-r from-pink-300 to-purple-500 px-6 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl"
               type="submit"
+              whileHover={{ scale: 1.05, rotate: 5 }} // Slight rotation and scaling on hover
             >
-              Send Message
-            </button>
+              <span className="text-lg">Send Message</span>
+              <div
+                className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]"
+              >
+                <div className="relative h-full w-10 bg-white/20"></div>
+              </div>
+            </motion.button>
           </div>
-        </form>
+        </motion.form>
       </div>
     </div>
   );

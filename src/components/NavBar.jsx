@@ -4,11 +4,12 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
-import { FaLinkedin, FaGithub, FaWhatsapp, FaEnvelope, FaLink, FaLaptopCode } from 'react-icons/fa'; // Import icons
+import { FaLinkedin, FaGithub, FaWhatsapp, FaEnvelope, FaLink, FaLaptopCode } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 function NavBar() {
     return (
-        <AppBar position="static" className="bg-black"> {/* Black background for the navbar */}
+        <AppBar position="fixed" className="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg"> {/* Change to 'fixed' */}
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     {/* Left side - Software Developer Icon */}
@@ -17,59 +18,69 @@ function NavBar() {
                         href="/"
                         className="text-white mr-2"
                     >
-                        <FaLaptopCode className="text-2xl" /> {/* Developer icon in white */}
+                        <FaLaptopCode className="text-3xl text-white" />
                     </IconButton>
 
                     {/* Right side - Social Media and Email Icons */}
-                    <Box className="flex-grow flex justify-end items-center">
+                    <Box className="flex-grow flex justify-end items-center space-x-6">
                         {/* LinkedIn */}
-                        <IconButton
-                            component="a"
-                            href="https://www.linkedin.com/in/its-prajith/"
-                            target="_blank"
-                            className="text-white hover:text-blue-700 transition-colors duration-300" // Default white, hover blue
-                        >
-                            <FaLinkedin className="text-2xl" />
-                        </IconButton>
+                        <motion.div whileHover={{ scale: 1.2, rotate: 10 }} transition={{ type: 'spring', stiffness: 300 }}>
+                            <IconButton
+                                component="a"
+                                href="https://www.linkedin.com/in/its-prajith/"
+                                target="_blank"
+                                className="text-white transition duration-300"
+                            >
+                                <FaLinkedin className="text-3xl" />
+                            </IconButton>
+                        </motion.div>
 
                         {/* GitHub */}
-                        <IconButton
-                            component="a"
-                            href="https://github.com/its-prajith"
-                            target="_blank"
-                            className="text-white hover:text-black transition-colors duration-300" // Default white, hover black
-                        >
-                            <FaGithub className="text-2xl" />
-                        </IconButton>
+                        <motion.div whileHover={{ scale: 1.2, rotate: -10 }} transition={{ type: 'spring', stiffness: 300 }}>
+                            <IconButton
+                                component="a"
+                                href="https://github.com/its-prajith"
+                                target="_blank"
+                                className="text-white transition duration-300"
+                            >
+                                <FaGithub className="text-3xl" />
+                            </IconButton>
+                        </motion.div>
 
                         {/* WhatsApp */}
-                        <IconButton
-                            component="a"
-                            href="https://wa.me/919789746808"
-                            target="_blank"
-                            className="text-white hover:text-green-500 transition-colors duration-300" // Default white, hover green
-                        >
-                            <FaWhatsapp className="text-2xl" />
-                        </IconButton>
+                        <motion.div whileHover={{ scale: 1.2, y: -5 }} transition={{ type: 'spring', stiffness: 300 }}>
+                            <IconButton
+                                component="a"
+                                href="https://wa.me/919789746808"
+                                target="_blank"
+                                className="text-white transition duration-300"
+                            >
+                                <FaWhatsapp className="text-3xl" />
+                            </IconButton>
+                        </motion.div>
 
                         {/* Email */}
-                        <IconButton
-                            component="a"
-                            href="mailto:prajithcbe@gmail.com"
-                            className="text-white hover:text-red-600 transition-colors duration-300" // Default white, hover red
-                        >
-                            <FaEnvelope className="text-2xl" />
-                        </IconButton>
+                        <motion.div whileHover={{ scale: 1.2, y: -5 }} transition={{ type: 'spring', stiffness: 300 }}>
+                            <IconButton
+                                component="a"
+                                href="mailto:prajithcbe@gmail.com"
+                                className="text-white transition duration-300"
+                            >
+                                <FaEnvelope className="text-3xl" />
+                            </IconButton>
+                        </motion.div>
 
                         {/* Linktree */}
-                        <IconButton
-                            component="a"
-                            href="https://linktr.ee/itsprajith?utm_source=linktree_admin_share"
-                            target="_blank"
-                            className="text-white hover:text-gray-400 transition-colors duration-300" // Default white, hover gray
-                        >
-                            <FaLink className="text-2xl" />
-                        </IconButton>
+                        <motion.div whileHover={{ scale: 1.2, rotate: 10 }} transition={{ type: 'spring', stiffness: 300 }}>
+                            <IconButton
+                                component="a"
+                                href="https://linktr.ee/itsprajith?utm_source=linktree_admin_share"
+                                target="_blank"
+                                className="text-white transition duration-300"
+                            >
+                                <FaLink className="text-3xl" />
+                            </IconButton>
+                        </motion.div>
                     </Box>
                 </Toolbar>
             </Container>

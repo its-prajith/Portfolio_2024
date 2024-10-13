@@ -1,19 +1,19 @@
 import { RiReactjsLine } from "react-icons/ri"; // React
-import { FaNodeJs, FaJava } from "react-icons/fa";        // Node.js, Java
-import { FaDatabase } from "react-icons/fa";    // MySQL, can represent databases
-import { SiExpress } from "react-icons/si";     // Express
-import { SiMongodb } from "react-icons/si";     // MongoDB
-import { SiJavascript } from "react-icons/si";  // JavaScript
-import { SiHtml5 } from "react-icons/si";       // HTML
-import { SiCss3 } from "react-icons/si";        // CSS
-import { SiC } from "react-icons/si";           // C
+import { FaNodeJs, FaJava } from "react-icons/fa"; // Node.js, Java
+import { FaDatabase } from "react-icons/fa"; // MySQL, can represent databases
+import { SiExpress } from "react-icons/si"; // Express
+import { SiMongodb } from "react-icons/si"; // MongoDB
+import { SiJavascript } from "react-icons/si"; // JavaScript
+import { SiHtml5 } from "react-icons/si"; // HTML
+import { SiCss3 } from "react-icons/si"; // CSS
+import { SiC } from "react-icons/si"; // C
 import { motion } from 'framer-motion';
 
 const Tech = () => {
   const techData = [
     { icon: <RiReactjsLine className="text-6xl text-cyan-400" />, name: "React.js" },
     { icon: <FaNodeJs className="text-6xl text-green-700" />, name: "Node.js" },
-    { icon: <FaJava className="text-6xl text-red-600" />, name: "Java" },    // Java added
+    { icon: <FaJava className="text-6xl text-red-600" />, name: "Java" },
     { icon: <FaDatabase className="text-6xl text-green-400" />, name: "MySQL" },
     { icon: <SiExpress className="text-6xl text-sky-700" />, name: "Express" },
     { icon: <SiMongodb className="text-6xl text-green-500" />, name: "MongoDB" },
@@ -36,8 +36,8 @@ const Tech = () => {
           {techData.map((tech, index) => (
             <motion.div 
               key={index} 
-              className="relative group rounded-2xl border-4 border-neutral-800 p-4 w-32 h-32 flex flex-col items-center justify-center transition-transform duration-200"
-              whileHover={{ scale: 1.15, y: -8 }}  // Scale effect and upward motion on hover
+              className="relative group rounded-2xl border-4 border-neutral-800 p-4 w-32 h-32 flex flex-col items-center justify-center transition-transform duration-200 bg-gray-900 hover:bg-gray-800 shadow-lg hover:shadow-2xl" // Added background and shadow effects
+              whileHover={{ scale: 1.15, rotate: 5, y: -8 }}  // Scale effect, rotation, and upward motion on hover
               transition={{ duration: 0.3 }}  // Faster transition for smoother effect
             >
               {/* Icon */}

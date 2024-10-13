@@ -5,6 +5,7 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import { motion } from 'framer-motion';
 
 export default function Sec2() {
   return (
@@ -19,38 +20,62 @@ export default function Sec2() {
         <Timeline position="alternate">
           <TimelineItem>
             <TimelineSeparator>
-              <TimelineDot />
+              <TimelineDot className="bg-pink-500" />
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent>
-              <time className="text-white">2025</time>
-              <div className="text-lg font-black text-white">B.Tech - Information Technology</div>
-              <p className="text-white">Sri Ramakrishna Engineering College, Coimbatore, TN</p>
-              <p className="text-white">Percentage: 68%</p>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                exit={{ opacity: 0, y: 20 }} 
+                transition={{ duration: 0.5 }} 
+                className="transition-transform duration-300 hover:scale-105"
+              >
+                <time className="text-white">2025</time>
+                <div className="text-lg font-black text-white">B.Tech - Information Technology</div>
+                <p className="text-white">Sri Ramakrishna Engineering College, Coimbatore, TN</p>
+                <p className="text-white">Percentage: 68%</p>
+              </motion.div>
             </TimelineContent>
           </TimelineItem>
           <TimelineItem>
             <TimelineSeparator>
-              <TimelineDot />
+              <TimelineDot className="bg-purple-500" />
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent>
-              <time className="text-white">2021</time>
-              <div className="text-lg font-black text-white">Higher Secondary Education (HSE)</div>
-              <p className="text-white">Ambal Matric Higher Secondary School, Coimbatore, TN</p>
-              <p className="text-white">Percentage: 82%</p>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                exit={{ opacity: 0, y: 20 }} 
+                transition={{ duration: 0.5 }} 
+                className="transition-transform duration-300 hover:scale-105"
+              >
+                <time className="text-white">2021</time>
+                <div className="text-lg font-black text-white">Higher Secondary Education (HSE)</div>
+                <p className="text-white">Ambal Matric Higher Secondary School, Coimbatore, TN</p>
+                <p className="text-white">Percentage: 82%</p>
+              </motion.div>
             </TimelineContent>
           </TimelineItem>
           <TimelineItem>
             <TimelineSeparator>
-              <TimelineDot />
+              <TimelineDot className="bg-blue-500" />
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent>
-              <time className="text-white">2019</time>
-              <div className="text-lg font-black text-white">SSLC</div>
-              <p className="text-white">Swami Vivekananda Matric Hr. Sec. School, Coimbatore, TN</p>
-              <p className="text-white">Percentage: 80%</p>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                exit={{ opacity: 0, y: 20 }} 
+                transition={{ duration: 0.5 }} 
+                className="transition-transform duration-300 hover:scale-105"
+              >
+                <time className="text-white">2019</time>
+                <div className="text-lg font-black text-white">SSLC</div>
+                <p className="text-white">Swami Vivekananda Matric Hr. Sec. School, Coimbatore, TN</p>
+                <p className="text-white">Percentage: 80%</p>
+              </motion.div>
             </TimelineContent>
           </TimelineItem>
         </Timeline>
@@ -59,4 +84,3 @@ export default function Sec2() {
     </>
   );
 }
-

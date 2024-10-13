@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-
 const Achievements = () => {
   const achievementData = [
     {
       id: "item2",
       image: "/Carousel/Ties.jpg",
-      title: " Covai Ties-2024",
+      title: "Covai Ties-2024",
       description: "Winner of the Cricket Tournament."
     },
     {
@@ -24,13 +23,13 @@ const Achievements = () => {
     {
       id: "item3",
       image: "/Carousel/Zone2022.jpeg",
-      title: "Anna University -Zonal 2022-23",
+      title: "Anna University -Zonal 2022",
       description: "Secured Third place in the cricket tournament."
     },
     {
      id: "item5",
-     image: "/Carousel/Zone2022.jpeg",  // Update this with your image path
-     title: "Anna University -Zonal 2024-25",
+     image: "/Carousel/Zone2024.jpeg",  
+     title: "Anna University -Zonal 2024",
      description: "Secured Third place in the Cricket Tournament."
    },
   ];
@@ -78,17 +77,17 @@ const Achievements = () => {
         ))}
       </div>
 
-      {/* Navigation Buttons */}
+      {/* Navigation Buttons with Thematic Colors */}
       <div className="flex w-full justify-center gap-2 py-2">
         {achievementData.map((achievement, index) => (
-          <a
-            href={`#${achievement.id}`}
+          <button
             key={achievement.id}
-            className="btn btn-xs"
+            className={`btn btn-xs transition duration-300 
+              ${currentIndex === index ? 'bg-gradient-to-r from-pink-300 to-purple-500 text-white' : 'bg-gray-600 text-gray-300 hover:bg-gradient-to-r hover:from-pink-300 hover:to-purple-500'}`}
             onClick={() => setCurrentIndex(index)}
           >
             {index + 1}
-          </a>
+          </button>
         ))}
       </div>
     </div>
@@ -96,5 +95,3 @@ const Achievements = () => {
 };
 
 export default Achievements;
-
- 
