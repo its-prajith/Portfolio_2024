@@ -4,7 +4,9 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
-import { FaLinkedin, FaGithub, FaWhatsapp, FaEnvelope, FaLink, FaLaptopCode } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaWhatsapp, FaEnvelope, FaLink } from 'react-icons/fa';
+// import { GiUnicorn } from 'react-icons/gi'; // Import the Unicorn icon
+import { GoZap } from "react-icons/go";
 import { motion } from 'framer-motion';
 
 function NavBar() {
@@ -12,13 +14,13 @@ function NavBar() {
         <AppBar position="fixed" className="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg"> {/* Change to 'fixed' */}
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    {/* Left side - Software Developer Icon */}
+                    {/* Left side - Unicorn Icon */}
                     <IconButton
                         component="a"
                         href="/"
                         className="text-white mr-2"
                     >
-                        <FaLaptopCode className="text-3xl text-white" />
+                        <GoZap className="text-3xl text-white" /> {/* Unicorn Icon */}
                     </IconButton>
 
                     {/* Right side - Social Media and Email Icons */}

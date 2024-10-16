@@ -4,8 +4,9 @@ import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
 import { motion } from 'framer-motion';
+import { FaGraduationCap, FaLaptopCode, FaBook } from 'react-icons/fa'; // Import React Icons
+import { GiBookmarklet,GiGraduateCap } from "react-icons/gi";
 
 export default function Sec2() {
   return (
@@ -18,63 +19,77 @@ export default function Sec2() {
         </h2>
 
         <Timeline position="alternate">
+          {/* Timeline Item 1 */}
           <TimelineItem>
             <TimelineSeparator>
-              <TimelineDot className="bg-pink-500" />
-              <TimelineConnector />
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                {/* React Icon for B.Tech */}
+                <GiGraduateCap className="text-pink-500 w-8 h-8" />
+              </div>
+              <TimelineConnector className="bg-gray-400" />
             </TimelineSeparator>
             <TimelineContent>
               <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
+                initial={{ opacity: 0, y: 30 }} 
                 animate={{ opacity: 1, y: 0 }} 
-                exit={{ opacity: 0, y: 20 }} 
-                transition={{ duration: 0.5 }} 
-                className="transition-transform duration-300 hover:scale-105"
+                exit={{ opacity: 0, y: 30 }} 
+                transition={{ duration: 0.6 }} 
+                className="transition-transform duration-300 hover:scale-105 bg-neutral-800 p-6 rounded-lg shadow-lg"
               >
-                <time className="text-white">2025</time>
-                <div className="text-lg font-black text-white">B.Tech - Information Technology</div>
-                <p className="text-white">Sri Ramakrishna Engineering College, Coimbatore, TN</p>
-                <p className="text-white">Percentage: 68%</p>
+                <time className="text-pink-300 text-lg font-semibold">2025</time>
+                <div className="text-xl font-bold text-white">B.Tech - Information Technology</div>
+                <p className="text-neutral-400">Sri Ramakrishna Engineering College, Coimbatore, TN</p>
+                <p className="text-neutral-400">Percentage: 68%</p>
               </motion.div>
             </TimelineContent>
           </TimelineItem>
+
+          {/* Timeline Item 2 */}
           <TimelineItem>
             <TimelineSeparator>
-              <TimelineDot className="bg-purple-500" />
-              <TimelineConnector />
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                {/* React Icon for HSE */}
+                <GiBookmarklet className="text-purple-500 w-8 h-8" />
+              </div>
+              <TimelineConnector className="bg-gray-400" />
             </TimelineSeparator>
             <TimelineContent>
               <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
+                initial={{ opacity: 0, y: 30 }} 
                 animate={{ opacity: 1, y: 0 }} 
-                exit={{ opacity: 0, y: 20 }} 
-                transition={{ duration: 0.5 }} 
-                className="transition-transform duration-300 hover:scale-105"
+                exit={{ opacity: 0, y: 30 }} 
+                transition={{ duration: 0.6 }} 
+                className="transition-transform duration-300 hover:scale-105 bg-neutral-800 p-6 rounded-lg shadow-lg"
               >
-                <time className="text-white">2021</time>
-                <div className="text-lg font-black text-white">Higher Secondary Education (HSE)</div>
-                <p className="text-white">Ambal Matric Higher Secondary School, Coimbatore, TN</p>
-                <p className="text-white">Percentage: 82%</p>
+                <time className="text-purple-300 text-lg font-semibold">2021</time>
+                <div className="text-xl font-bold text-white">Higher Secondary Education (HSE)</div>
+                <p className="text-neutral-400">Ambal Matric Higher Secondary School, Coimbatore, TN</p>
+                <p className="text-neutral-400">Percentage: 82%</p>
               </motion.div>
             </TimelineContent>
           </TimelineItem>
+
+          {/* Timeline Item 3 */}
           <TimelineItem>
             <TimelineSeparator>
-              <TimelineDot className="bg-blue-500" />
-              <TimelineConnector />
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                {/* React Icon for SSLC */}
+                <FaBook className="text-blue-500 w-8 h-8" />
+              </div>
+              <TimelineConnector className="bg-gray-400" />
             </TimelineSeparator>
             <TimelineContent>
               <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
+                initial={{ opacity: 0, y: 30 }} 
                 animate={{ opacity: 1, y: 0 }} 
-                exit={{ opacity: 0, y: 20 }} 
-                transition={{ duration: 0.5 }} 
-                className="transition-transform duration-300 hover:scale-105"
+                exit={{ opacity: 0, y: 30 }} 
+                transition={{ duration: 0.6 }} 
+                className="transition-transform duration-300 hover:scale-105 bg-neutral-800 p-6 rounded-lg shadow-lg"
               >
-                <time className="text-white">2019</time>
-                <div className="text-lg font-black text-white">SSLC</div>
-                <p className="text-white">Swami Vivekananda Matric Hr. Sec. School, Coimbatore, TN</p>
-                <p className="text-white">Percentage: 80%</p>
+                <time className="text-blue-300 text-lg font-semibold">2019</time>
+                <div className="text-xl font-bold text-white">SSLC</div>
+                <p className="text-neutral-400">Swami Vivekananda Matric Hr. Sec. School, Coimbatore, TN</p>
+                <p className="text-neutral-400">Percentage: 80%</p>
               </motion.div>
             </TimelineContent>
           </TimelineItem>
