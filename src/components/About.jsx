@@ -1,5 +1,5 @@
 import React from "react";
-import profileImg from "../assets/AbtImg.jpg";
+import profileImg from "../assets/AbtImg1.jpg"; // Updated image path
 import { FaDownload } from 'react-icons/fa'; // Import download icon
 
 export default function About() {
