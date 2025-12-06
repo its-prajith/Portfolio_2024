@@ -39,7 +39,7 @@ export default function Sec2() {
                 <time className="text-pink-300 text-lg font-semibold">2025</time>
                 <div className="text-xl font-bold text-white">B.Tech - Information Technology</div>
                 <p className="text-neutral-400">Sri Ramakrishna Engineering College, Coimbatore, TN</p>
-                <p className="text-neutral-400">Percentage: 68%</p>
+                <p className="text-neutral-400">Percentage: 70%</p>
               </motion.div>
             </TimelineContent>
           </TimelineItem>
