@@ -30,15 +30,22 @@ export default function About() {
               Prajith A D
             </h2>
 
-            <p className="text-2xl font-bold mb-4 text-gray-100 animate-fade-in">
-              As a B.Tech Information Technology student, I'm passionate about IT's role in driving innovation.
-            </p>
+   
+<p className="text-2xl font-bold mb-4 text-gray-100 animate-fade-in">
+  I'm a Software Developer specializing in Full Stack Development, with a strong focus on building high-performance backend systems.
+</p>
 
-            <p className="text-gray-300 leading-relaxed mb-6 animate-fade-in">
-              I've explored programming, software development, networking, and database management. I'm eager to apply my
-              skills to real-world challenges. I aim to join a forward-thinking team that makes a meaningful impact
-              through technology and contribute to the organization and society.
-            </p>
+<p className="text-gray-300 leading-relaxed mb-6 animate-fade-in">
+  Tech Stack: <strong>Node.js</strong>, <strong>Spring Boot</strong>, <strong>Php</strong>, <strong>Spring Boot</strong>, <strong>MongoDB</strong>, <strong>Docker</strong>, <strong>RESTful APIs</strong>.
+</p>
+
+<p className="text-gray-300 leading-relaxed mb-6 animate-fade-in">
+  I craft scalable, secure, and efficient applications using modern technologies and best practices. My focus is on designing robust APIs, optimizing databases, and delivering seamless integrations that power impactful digital experiences.
+</p>
+
+<p className="text-xl italic text-gray-400 animate-fade-in">
+  "Turning complex challenges into elegant solutions."
+</p>
 
             {/* ✅ Download Resume Button */}
             <a
