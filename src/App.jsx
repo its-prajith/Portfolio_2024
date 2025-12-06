@@ -9,6 +9,8 @@ import Contact from "./components/Contact";
 import AchievementsCarousel from "./components/Achievements";
 import LoaderWithQuote from "./components/Loader"; // Import the loader
 
+
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -34,7 +36,7 @@ function App() {
               <Sec2 />
             </div>
             <div className="my-8">
-              <Tech />
+              <Tech cardSize="xs" />
             </div>
             <div className="my-8">
               <Projects />
